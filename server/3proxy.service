@@ -1,0 +1,10 @@
+[Unit]
+Description=3proxy Proxy Server
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/3proxy /etc/3proxy/3proxy.cfg
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
